@@ -18,6 +18,6 @@ jobs:
     - name: install dependencies
       run: sudo apt-get install build-essential libpulse-dev libasound2-dev libx11-dev libxext-dev libxinerama-dev libusb-1.0-0-dev libudev-dev
     - name: change dir
-      run: cd colorchord/colorchord2
+      run: cd colorchord2
     - name: make
       run: make
