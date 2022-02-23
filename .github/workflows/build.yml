@@ -36,4 +36,5 @@ jobs:
         platform: x64
     - name: Run build script
       shell: cmd
+      working-directory: .\colorchord2\
       run: .\colorchord2\windows\compile-clang.bat
