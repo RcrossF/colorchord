@@ -7,7 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-linux:
+    name: Linux build
     strategy:
       matrix:
         os: [ubuntu-20.04, ubuntu-18.04]
@@ -22,3 +23,18 @@ jobs:
     - name: make
       working-directory: ./colorchord2
       run: make
+
+  build-windows:
+    name: Windows build
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Clang
+      uses: egor-tensin/setup-clang@v1
+      with:
+        version: latest
+        platform: x64
+    - name: Run build script
+    - name: Run bat script on CMD
+      shell: cmd
+      run: .\colorchord2\windows\compile-clang.bat
