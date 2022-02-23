@@ -35,6 +35,5 @@ jobs:
         version: latest
         platform: x64
     - name: Run build script
-    - name: Run bat script on CMD
       shell: cmd
       run: .\colorchord2\windows\compile-clang.bat
